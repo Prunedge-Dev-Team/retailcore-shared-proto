@@ -1,0 +1,44 @@
+syntax = "proto3";
+package user_proto;
+// import "google/protobuf/empty.proto";
+
+service UserService {
+  rpc GetUser (UserRetrieveRequest) returns (User) {};
+  rpc ListUsers (UserListRequest) returns (UserListResponse) {};
+  rpc LoginUser (LoginRequest) returns (LoginResponse) {};
+}
+
+message User {
+  string id = 1;
+  string firstname = 2;
+  string lastname = 3;
+  string role = 4;
+  bool is_active = 5;
+  string username = 6;
+}
+
+message UserRetrieveRequest {
+  string id = 1;
+}
+
+message UserListRequest {
+    int32 page = 1;
+    int32 page_size = 2;
+}
+
+message UserListResponse {
+    int32 count = 1;
+    string next = 2;
+    string previous = 3;
+    repeated User results = 4;
+}
+
+message LoginRequest {
+    string username = 1;
+    string password = 2;
+}
+
+message LoginResponse {
+    string access_token = 1;
+    string refresh_token = 2;
+}
