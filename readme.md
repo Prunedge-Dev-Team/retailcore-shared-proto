@@ -20,3 +20,9 @@ Finally, update the version number in retailcore_proto/__init__.py by increasing
 ```python
 __version__ = '0.0.x'
 ```
+
+## Usage of this library
+Add the following to your project requirements.txt file
+```
+git+https://github.com/Prunedge-Dev-Team/retailcore-shared-proto.git@main
+```
