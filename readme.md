@@ -18,7 +18,7 @@ from retailcore_proto.py_grpc import user_pb2 as user__pb2
 
 Finally, update the version number in retailcore_proto/__init__.py by increasing using the right semantic naming convention
 ```python
-__version__ = '0.0.x'
+__version__ = 'x.y.z'
 ```
 
 ## Usage of this library
